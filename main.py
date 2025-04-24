@@ -1,5 +1,5 @@
 from flat import Bill, Flatmate
-from reports import PdfReport
+from report import PdfReport
 
 # Colect info regarding the names, total amount, days in the house
 total_amount = float(input("Hey user, enter the bill amount: "))
@@ -19,5 +19,5 @@ print(f"{name1} pays", first_mate.pays(the_bill, second_mate))
 print(f"{name2} pays", second_mate.pays(the_bill, first_mate))
 
 # Create the report in PDF
-generate = PdfReport("bills")
+generate = PdfReport(period)
 generate.generate(first_mate, second_mate, the_bill)
